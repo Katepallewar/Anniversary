@@ -752,8 +752,13 @@
     });
     document.addEventListener('pointerdown', e => { if (!panel.hidden && !root.contains(e.target)) closePanel(); });
 
-    useSource(saved() || CFG.song.url, false);
-    return { isPanelOpen: () => !panel.hidden, closePanel };
+    useSource(saved() || CFG.song.url, true);
+    const startOnUserGesture = () => {
+      if (src && !playing) play();
+    };
+    document.addEventListener('pointerdown', startOnUserGesture, { once: true });
+    document.addEventListener('keydown', startOnUserGesture, { once: true });
+    return { isPanelOpen: () => !panel.hidden, closePanel, play };
   })();
 
   /* ======================================================================
