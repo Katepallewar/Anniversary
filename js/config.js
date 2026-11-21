@@ -13,7 +13,7 @@ window.ANNIVERSARY = {
      - A YouTube link (https://www.youtube.com/watch?v=...).
      Leave "" to start without a song: the music button then lets you paste a link
      (saved on that device only). Spotify links can't be played inside a web page. */
-  song: { url: "", title: "Our song" },
+  song: { url: "https://youtu.be/TpdClaFudiI?si=_xIm_Umto7POmCiD", title: "Our song" },
 
   /* The cover / hero photograph. Replace with their real wedding photo,
      e.g. "photos/wedding.jpg" (put the file in the photos/ folder). */
