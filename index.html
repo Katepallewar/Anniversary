@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1f0710">
+<title>Nikita &amp; Parimal · One Year of Us</title>
+<meta name="description" content="A small interactive keepsake for Nikita &amp; Parimal's first wedding anniversary.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="dark" class="is-intro">
+<noscript><p style="padding:2rem;color:#fff7ee;font-family:serif">This anniversary keepsake needs JavaScript. Please enable it and refresh ♡</p></noscript>
+
+<main class="stage" id="stage">
+
+  <!-- ============ SCENE 1 · THE INVITATION ============ -->
+  <section class="scene scene--open" data-state="behind" data-theme="dark" data-name="The invitation" aria-label="The invitation">
+    <div class="open-bg" aria-hidden="true">
+      <div class="px open-photo" style="--d:-16"><img data-hero alt=""></div>
+      <div class="open-wash"></div>
+      <div class="open-light"></div>
+      <div class="open-vignette"></div>
+    </div>
+
+    <div class="open-content">
+      <div class="open-top fade-on-open">
+        <p class="kicker" data-r style="--i:0">A little keepsake for a beautiful love story</p>
+        <h1 class="open-names" aria-label="Nikita and Parimal">
+          <span data-split data-bind="first" style="--base:.1"></span>
+          <span class="amp" data-r style="--i:5">&amp;</span>
+          <span data-split data-bind="second" style="--base:.45"></span>
+        </h1>
+        <p class="date-line" data-r style="--i:9"><span data-bind="dateDots"></span></p>
+      </div>
+
+      <div class="env-wrap" data-r style="--i:11"><button class="envelope" id="envelope" type="button" aria-label="Break the seal and open your anniversary letter">
+        <span class="env-back"></span>
+        <span class="env-card" aria-hidden="true">
+          <span class="card-inner">
+            <small>One year of us</small>
+            <b class="script"><span data-bind="first"></span> &amp; <span data-bind="second"></span></b>
+            <em data-bind="dateLong"></em>
+          </span>
+        </span>
+        <span class="env-front" aria-hidden="true"><i class="f-left"></i><i class="f-right"></i><i class="f-bottom"></i></span>
+        <span class="env-flap" aria-hidden="true"></span>
+        <span class="env-seal" aria-hidden="true">N<i>&amp;</i>P</span>
+      </button></div>
+      <p class="hint" data-r style="--i:13">Break the seal to begin</p>
+    </div>
+    <div class="bloom" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============ SCENE 2 · OUR LOVE STORY ============ -->
+  <section class="scene scene--hero" data-state="ahead" data-theme="light" data-name="Our story" aria-label="Our love story">
+    <div class="hero-roman px" style="--d:-12" aria-hidden="true">MMXXV <i>·</i> MMXXVI</div>
+    <div class="floaters" aria-hidden="true"></div>
+    <div class="hero-grid" data-scroll>
+      <div class="hero-text">
+        <p class="kicker" data-r style="--i:0">Happy first anniversary</p>
+        <h2 class="hero-names" aria-label="Nikita and Parimal">
+          <span class="nm"><span data-split data-bind="first" style="--base:.1"></span></span>
+          <span class="amp" data-r style="--i:3">&amp;</span>
+          <span class="nm"><span data-split data-bind="second" style="--base:.4"></span></span>
+        </h2>
+        <p class="hero-sub" data-r style="--i:7">One year down. A lifetime of stories still to write.</p>
+        <div class="stats" data-r style="--i:9">
+          <div class="stat"><strong id="daysCount">0</strong><small>days together</small></div>
+          <div class="stat"><strong>1</strong><small>year married</small></div>
+          <div class="stat"><strong>∞</strong><small>more to come</small></div>
+        </div>
+      </div>
+      <div class="hero-photo px" style="--d:22">
+        <figure class="arch" data-r style="--i:2">
+          <span class="arch-ring" aria-hidden="true"></span>
+          <div class="arch-img"><img data-hero alt=""></div>
+        </figure>
+        <span class="photo-tag" data-r style="--i:8"><span data-bind="dateDots"></span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCENE 3 · MEMORY GALLERY ============ -->
+  <section class="scene scene--gallery" data-state="ahead" data-theme="light" data-name="The scrapbook" aria-label="The memory scrapbook">
+    <header class="scene-head">
+      <p class="kicker" data-r style="--i:0">Little pieces of forever</p>
+      <h2 class="display" data-r style="--i:1">The memory scrapbook</h2>
+      <p class="micro" data-r style="--i:2">Drag the photos around · tap one to open it</p>
+    </header>
+    <div class="board" id="board"></div>
+    <p class="board-empty" id="boardEmpty" hidden>The scrapbook is waiting for its first photo ♡</p>
+    <div class="gallery-tools" data-nonav>
+      <label class="btn btn--small" for="upload">＋ Add photos</label>
+      <input id="upload" type="file" accept="image/*" multiple hidden>
+    </div>
+  </section>
+
+  <!-- ============ SCENE 4 · TIMELINE ============ -->
+  <section class="scene scene--time" data-state="ahead" data-theme="dark" data-name="The first year" aria-label="A timeline of the first year">
+    <div class="ghost-year px" style="--d:-22" aria-hidden="true">2025 — 2026</div>
+    <div class="time-wrap">
+      <header class="scene-head">
+        <p class="kicker" data-r style="--i:0">The first chapter of many</p>
+        <h2 class="display" data-r style="--i:1">One year, in little chapters</h2>
+      </header>
+      <div class="tl" id="tl" data-r style="--i:3">
+        <div class="tl-track">
+          <i class="tl-line"></i><i class="tl-fill" id="tlFill"></i>
+          <ol class="tl-nodes" id="tlNodes"></ol>
+        </div>
+      </div>
+      <div class="tl-detail-wrap" data-r style="--i:5">
+        <article class="tl-detail" id="tlDetail" aria-live="polite">
+          <p class="tl-date" id="tlDate"></p>
+          <h3 class="tl-title" id="tlTitle"></h3>
+          <p class="tl-text" id="tlText"></p>
+        </article>
+      </div>
+      <div data-r style="--i:6" data-nonav><button class="btn" id="tlNext" type="button">Next moment →</button></div>
+    </div>
+  </section>
+
+  <!-- ============ SCENE 5 · THE LETTER ============ -->
+  <section class="scene scene--letter" data-state="ahead" data-theme="dark" data-name="A letter" aria-label="A letter from her sibling">
+    <div class="candle" aria-hidden="true"></div>
+    <div class="letter-wrap">
+      <p class="kicker" id="letterEyebrow" data-r style="--i:0"></p>
+      <article class="paper" id="paper" data-scroll tabindex="0" aria-label="Letter"></article>
+    </div>
+  </section>
+
+  <!-- ============ SCENE 6 · FINALE ============ -->
+  <section class="scene scene--finale" data-state="ahead" data-theme="dark" data-name="Forever" aria-label="The finale">
+    <div class="finale-glow" aria-hidden="true"></div>
+    <div class="finale-content" data-scroll>
+      <p class="kicker" data-r style="--i:0"><span data-bind="dateDots"></span></p>
+      <h2 class="finale-title" aria-label="Happy anniversary">
+        <span data-split style="--base:.1">Happy</span>
+        <span data-split style="--base:.35">Anniversary</span>
+      </h2>
+      <p class="finale-names script" data-r style="--i:6"><span data-bind="first"></span> &amp; <span data-bind="second"></span></p>
+      <p class="finale-msg" id="finaleMsg" data-r style="--i:8"></p>
+      <div class="finale-actions" data-r style="--i:10" data-nonav>
+        <button class="btn btn--gold" id="celebrate" type="button">Celebrate ✦</button>
+        <button class="btn" id="fortune" type="button">Draw a fortune</button>
+        <button class="btn" id="dateIdea" type="button">Date-night idea</button>
+        <button class="btn" id="replay" type="button">Replay the story ↺</button>
+      </div>
+      <p class="finale-note" id="finaleNote" aria-live="polite"></p>
+      <p class="finale-end script" data-r style="--i:12">Here's to forever ♡</p>
+    </div>
+  </section>
+</main>
+
+<!-- ============ GLOBAL UI ============ -->
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="chapter-label" id="chapterLabel" aria-hidden="true"><span class="num" id="chNum"></span><span class="ttl" id="chTitle"></span></div>
+<nav class="rail" id="rail" aria-label="Chapters"></nav>
+<button class="next-cue" id="nextCue" type="button" aria-label="Next chapter"><span>Continue</span><i></i></button>
+
+<div class="music" id="music">
+  <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false" aria-label="Play music">
+    <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="music-label" id="musicLabel">Add a song</span>
+  </button>
+  <button class="music-edit" id="musicEdit" type="button" aria-label="Change song" aria-expanded="false" aria-controls="musicPanel">♪</button>
+  <form class="music-panel" id="musicPanel" hidden>
+    <label for="musicUrl">Song link</label>
+    <input id="musicUrl" type="url" inputmode="url" placeholder="https://…mp3  or  YouTube link" autocomplete="off">
+    <p>Use a direct audio file link or a YouTube link. Saved on this device only.</p>
+    <div class="row"><button class="btn btn--small" type="submit">Save &amp; play</button><button class="btn btn--small btn--quiet" type="button" id="musicClear">Reset</button></div>
+  </form>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-close" id="lbClose" type="button" aria-label="Close">×</button>
+  <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Previous photo">‹</button>
+  <figure class="lb-fig" id="lbFig">
+    <div class="lb-frame"><img id="lbImg" alt="" draggable="false"></div>
+    <figcaption><span class="script" id="lbCap"></span><small id="lbCount"></small></figcaption>
+  </figure>
+  <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Next photo">›</button>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
