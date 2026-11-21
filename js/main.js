@@ -247,6 +247,7 @@
     if (opening) return;
     opening = true;
     unlocked = true;
+    Music.play();
     openScene.classList.add('is-opening');
     envelope.classList.add('is-open');
     envelope.setAttribute('aria-expanded', 'true');
