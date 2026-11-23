@@ -61,7 +61,7 @@ window.ANNIVERSARY = {
       "Here's to many more anniversaries, to growing together, and to a lifetime of being each other's favourite person."
     ],
     closing: "With so much love,",
-    signature: "Your sibling ♡"
+    signature: "Your Aditya♡"
   },
 
   finale: {
