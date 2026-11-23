@@ -56,7 +56,7 @@ window.ANNIVERSARY = {
     salutation: "Dear Nikita & Parimal,",
     paragraphs: [
       "Happy first anniversary! It feels so special to celebrate this little milestone with you both. One year ago, you began a new chapter together, and I hope this year has been filled with warmth, laughter, tiny adventures, patience, and the kind of love that feels like home.",
-      "Nikita, seeing you begin this journey makes me so happy. And Parimal, thank you for being part of her world and for the memories you two are building together.",
+      "Niku tai, seeing you begin this journey makes me so happy. And Parimal jiju, thank you for being part of her world and for the memories you two are building together.",
       "May you keep choosing each other in the big moments and the ordinary ones: over morning chai, silly jokes, long conversations, spontaneous plans, and every season life brings.",
       "Here's to many more anniversaries, to growing together, and to a lifetime of being each other's favourite person."
     ],
